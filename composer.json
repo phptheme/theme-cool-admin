@@ -1,0 +1,12 @@
+{
+    "name": "phptheme/theme-cool-admin",
+    "license": "MIT",
+    "require": {
+        "phptheme/core": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+			"PhpTheme\\CoolAdminTheme\\" : ""
+        }
+    }
+}
