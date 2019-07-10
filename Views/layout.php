@@ -53,42 +53,11 @@ use PhpTheme\Core\Html;
 <script src="<?= $this->baseUrl;?>/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 <script src="<?= $this->baseUrl;?>/vendor/chartjs/Chart.bundle.min.js"></script>
 <script src="<?= $this->baseUrl;?>/vendor/select2/select2.min.js"></script>
-<style type="text/css">
-
-.header-mobile-2.header-mobile .navbar-mobile {
-    top: 66px;
-}
-
-.table-data3 tbody tr td:last-child {
-    padding-right: 20px;
-}
-
-@media (min-width: 992px)
-{
-    .header__navbar ul li a i {
-        min-width: 20px;
-    }
-    
-    .account-item--style2 > .image {
-        border: 2px solid #ccc;
-    }
-}
-
-.account-dropdown__item a i {
-    min-width: 25px;
-    margin-right: 5px;
-}
-
-</style>
-
+<?= $this->styles();?>
 <?= $head;?>
-
 </head>
-
-<body style="background-color: #f7f7f7;">
-
+<body>
 <?= $beginBody;?>
-
 <div class="page-wrapper">
 	<!-- HEADER DESKTOP-->
 	<header class="header-desktop3 d-none d-lg-block">
@@ -96,9 +65,9 @@ use PhpTheme\Core\Html;
 	        <div class="header3-wrap">                            
 	            <div class="header__logo">
                     <?php if($logoUrl):?>
-	                <a href="<?= $homeUrl;?>" style="color: #ccc;">
-                        <img src="<?= $logoUrl;?>" alt="">
-	                </a>
+	                   <a href="<?= $homeUrl;?>">
+                            <img src="<?= $logoUrl;?>" alt="">
+                        </a>
                     <?php endif;?>
 	            </div>
 	            <div class="header__navbar">
@@ -138,50 +107,9 @@ use PhpTheme\Core\Html;
         </nav>
     </header>
 	<div class="sub-header-mobile-2 d-block d-lg-none">
-	    <div class="header__tool" style="position: relative;">
-	    	<div style="position: absolute; left: -10px;" class="d-block t-lg-none">
-	    	  <?= $this->actionsMenu($actionsMenu);?>
-			</div>
-	    	<!--
-	        <div class="header-button-item has-noti js-item-menu">
-	            <i class="zmdi zmdi-notifications"></i>
-	            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
-	                <div class="notifi__title">
-	                    <p>You have 3 Notifications</p>
-	                </div>
-	                <div class="notifi__item">
-	                    <div class="bg-c1 img-cir img-40">
-	                        <i class="zmdi zmdi-email-open"></i>
-	                    </div>
-	                    <div class="content">
-	                        <p>You got a email notification</p>
-	                        <span class="date">April 12, 2018 06:50</span>
-	                    </div>
-	                </div>
-	                <div class="notifi__item">
-	                    <div class="bg-c2 img-cir img-40">
-	                        <i class="zmdi zmdi-account-box"></i>
-	                    </div>
-	                    <div class="content">
-	                        <p>Your account has been blocked</p>
-	                        <span class="date">April 12, 2018 06:50</span>
-	                    </div>
-	                </div>
-	                <div class="notifi__item">
-	                    <div class="bg-c3 img-cir img-40">
-	                        <i class="zmdi zmdi-file-text"></i>
-	                    </div>
-	                    <div class="content">
-	                        <p>You got a new file</p>
-	                        <span class="date">April 12, 2018 06:50</span>
-	                    </div>
-	                </div>
-	                <div class="notifi__footer">
-	                    <a href="#">All notifications</a>
-	                </div>
-	            </div>
-	        </div>
-		    -->
+	    <div class="header__tool">
+	    	<?= $this->actionsMenu($actionsMenu);?>
+            <?= $this->notifications($notifications);?>
 			<?= $this->optionsMenu($optionsMenu);?>
             <?= $this->mobileAccount($account);?>
 	    </div>
@@ -193,7 +121,7 @@ use PhpTheme\Core\Html;
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <?= $this->breadcrumbs($breadcrumbs);?>
+                        <?= $breadcrumbs;?>
                         <?= $content;?>
                     </div>
                 </div>

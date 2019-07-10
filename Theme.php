@@ -5,9 +5,19 @@ namespace PhpTheme\CoolAdminTheme;
 class Theme extends \PhpTheme\Core\Theme
 {
 
+    const ALERT = Alert::class;
+
+    const STYLES = Styles::class;
+
+    const POPUP = Popup::class;
+
+    const CARD = Card::class;
+
     const LAYOUT = Layout::class;
 
     const MENU = Menu::class;
+
+    const ACCOUNT_MENU = AccountMenu::class;
 
     const MAIN_MENU = MainMenu::class;
 
@@ -37,6 +47,26 @@ class Theme extends \PhpTheme\Core\Theme
         echo $this->endWidget($this->_layout);
     }
 
+    public function alert(array $params = [])
+    {
+        return $this->widget(static::ALERT, $params);
+    }
+
+    public function popup(array $params = [])
+    {
+        return $this->widget(static::POPUP, $params);
+    }
+
+    public function card(array $params = [])
+    {
+        return $this->widget(static::CARD, $params);
+    }
+
+    public function styles(array $params = [])
+    {
+        return $this->widget(static::STYLES, $params);
+    }
+
     public function breadcrumbs(array $params = [])
     {
         return $this->widget(static::BREADCRUMBS, $params);
@@ -45,6 +75,11 @@ class Theme extends \PhpTheme\Core\Theme
     public function mainMenu(array $params = [])
     {
         return $this->widget(static::MAIN_MENU, $params);
+    }
+
+    public function accountMenu(array $params = [])
+    {
+        return $this->widget(static::ACCOUNT_MENU, $params);
     }
 
     public function optionsMenu(array $params = [])

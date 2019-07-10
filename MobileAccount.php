@@ -5,9 +5,6 @@ namespace PhpTheme\CoolAdminTheme;
 class MobileAccount extends Account
 {
 
-    public function run()
-    {
-        
-    }
-
+    const TEMPLATE = 'mobile-account';
+    
 }

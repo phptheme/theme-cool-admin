@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class OptionsMenu extends Menu
+class AccountMenu extends Menu
 {
 
     public $tag = 'div';
@@ -17,14 +17,5 @@ class OptionsMenu extends Menu
             'class' => 'account-dropdown__item'
         ]
     ];
-
-    public function run()
-    {
-        $content = parent::run();
-
-        return $this->render('options-menu', [
-            'content' => $content
-        ]);
-    }
 
 }

@@ -35,6 +35,20 @@ class Layout extends \PhpTheme\Core\Widget
 
     public $endBody;
 
+    protected function createBreadcrumbs()
+    {
+        $breadcrumbs = $this->breadcrumbs;
+
+        if ($breadcrumbs)
+        {
+            $breadcrumbs['actionsMenu'] = $this->actionsMenu;
+
+            $breadcrumbs = $this->theme->breadcrumbs($breadcrumbs);
+        }
+
+        return $breadcrumbs;
+    }
+
     public function run()
     {
         $logoUrl = $this->logoUrl;
@@ -48,7 +62,7 @@ class Layout extends \PhpTheme\Core\Widget
             'lang' => $this->lang,
             'title' => $this->title,
             'copyright' => strtr($this->copyright, ['{year}' => date('Y')]),
-            'breadcrumbs' => $this->breadcrumbs,
+            'breadcrumbs' => $this->createBreadcrumbs(),
             'actionsMenu' => $this->actionsMenu,
             'mainMenu' => $this->mainMenu,
             'content' => $this->content,
