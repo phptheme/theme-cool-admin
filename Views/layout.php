@@ -108,7 +108,9 @@ use PhpTheme\Core\Html;
     </header>
 	<div class="sub-header-mobile-2 d-block d-lg-none">
 	    <div class="header__tool">
-	    	<?= $this->actionsMenu($actionsMenu);?>
+            <div class="d-block t-lg-none" style="position: absolute; left: -10px;">
+	    	  <?= $this->actionsMenu($actionsMenu);?>
+            </div>
             <?= $this->notifications($notifications);?>
 			<?= $this->optionsMenu($optionsMenu);?>
             <?= $this->mobileAccount($account);?>

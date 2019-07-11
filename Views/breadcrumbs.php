@@ -34,7 +34,9 @@
                     </ul>               
                 <?php endif;?>
             </div>
-            <?= $actionsMenu;?>
+            <div class="d-none d-lg-block">
+                <?= $actionsMenu;?>
+            </div>
         </div>                   
     </div>
 </section>
