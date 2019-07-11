@@ -33,6 +33,8 @@ class Theme extends \PhpTheme\Core\Theme
 
     const NOTIFICATIONS = Notifications::class;
 
+    const TABLE = Table::class;
+
     protected $_layout;
 
     public function beginLayout(array $params = [])
