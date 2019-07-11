@@ -35,6 +35,8 @@ class Theme extends \PhpTheme\Core\Theme
 
     const TABLE = Table::class;
 
+    const FORM_GROUP = FormGroup::class;
+
     protected $_layout;
 
     public function beginLayout(array $params = [])
@@ -63,6 +65,11 @@ class Theme extends \PhpTheme\Core\Theme
     {
         return $this->widget(static::CARD, $params);
     }
+
+    public function formGroup(array $params = [])
+    {
+        return $this->widget(static::FORM_GROUP, $params);
+    }    
 
     public function styles(array $params = [])
     {
