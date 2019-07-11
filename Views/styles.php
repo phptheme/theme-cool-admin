@@ -1,5 +1,13 @@
 <style type="text/css">
 
+@media (max-width: 991px)
+{
+    .au-breadcrumb
+    {
+        height: 75px;
+    }
+}
+
 .header__navbar ul li a
 {
     line-height: 22px;
