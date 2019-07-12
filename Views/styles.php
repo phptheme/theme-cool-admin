@@ -1,5 +1,10 @@
 <style type="text/css">
 
+.navbar-mobile-sub__list
+{
+    padding-left: 0px;
+}
+
 .account-item
 {
     cursor: auto;
