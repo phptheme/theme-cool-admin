@@ -12,7 +12,7 @@ class MainMenu extends Menu
     public $tag = 'ul';
 
     public $defaultOptions = [
-        'class' => 'navbar-mobile__list list-unstyled',
+        'class' => 'list-unstyled',
     ];
 
     public $defaultItem = [
@@ -36,6 +36,7 @@ class MainMenu extends Menu
                         ]
                     ],
                     'linkOptions' => [
+                        'class' => 'js-arrow', // mobile menu
                         'onclick' => 'return false;'
                     ]
                 ]);

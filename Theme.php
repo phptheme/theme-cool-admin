@@ -21,6 +21,8 @@ class Theme extends \PhpTheme\Core\Theme
 
     const MAIN_MENU = MainMenu::class;
 
+    const MOBILE_MAIN_MENU = MobileMainMenu::class;
+
     const OPTIONS_MENU = OptionsMenu::class;
 
     const ACTIONS_MENU = ActionsMenu::class;
@@ -89,6 +91,11 @@ class Theme extends \PhpTheme\Core\Theme
     public function mainMenu(array $params = [])
     {
         return $this->widget(static::MAIN_MENU, $params);
+    }
+
+    public function mobileMainMenu(array $params = [])
+    {
+        return $this->widget(static::MOBILE_MAIN_MENU, $params);
     }
 
     public function accountMenu(array $params = [])

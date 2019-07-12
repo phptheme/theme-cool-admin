@@ -102,7 +102,7 @@ use PhpTheme\Core\Html;
 	    </div>
 	    <nav class="navbar-mobile">
 	        <div class="container-fluid">
-                <?= $this->mainMenu($mainMenu);?>	      
+                <?= $this->mobileMainMenu($mainMenu);?>	      
             </div>
         </nav>
     </header>
