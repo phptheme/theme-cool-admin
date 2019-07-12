@@ -1,5 +1,10 @@
 <style type="text/css">
 
+.account-item
+{
+    cursor: auto;
+}
+
 @media (max-width: 991px)
 {
     .au-breadcrumb

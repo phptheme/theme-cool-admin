@@ -10,13 +10,11 @@
         <div class="account-dropdown js-dropdown">
             <div class="info clearfix">
                 <div class="image">
-                    <a href="<?= $profileUrl;?>">
-                        <img src="<?= $avatarUrl;?>" alt="<?= $name;?>" />
-                    </a>
+                    <img src="<?= $avatarUrl;?>" alt="<?= $name;?>" />
                 </div>
                 <div class="content">
                     <h5 class="name">
-                        <a href="<?= $profileUrl;?>"><?= $name;?></a>
+                        <?= $name;?>
                     </h5>
                     <span class="email"><?= $description;?></span>
                 </div>
