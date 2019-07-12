@@ -15,6 +15,10 @@ class Theme extends \PhpTheme\Core\Theme
 
     const LAYOUT = Layout::class;
 
+    const LOGIN_LAYOUT = LoginLayout::class;
+
+    const MAIN_LAYOUT = MainLayout::class;    
+
     const MENU = Menu::class;
 
     const ACCOUNT_MENU = AccountMenu::class;
@@ -58,11 +62,21 @@ class Theme extends \PhpTheme\Core\Theme
         return $this->widget(static::LAYOUT, $params);
     }
 
+    public function loginLayout(array $params = [])
+    {
+        return $this->widget(static::LOGIN_LAYOUT, $params);
+    }
+
+    public function mainLayout(array $params = [])
+    {
+        return $this->widget(static::MAIN_LAYOUT, $params);
+    }
+
     public function alert(array $params = [])
     {
         return $this->widget(static::ALERT, $params);
     }
-
+    
     public function popup(array $params = [])
     {
         return $this->widget(static::POPUP, $params);
