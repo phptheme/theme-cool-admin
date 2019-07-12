@@ -51,6 +51,11 @@ class Theme extends \PhpTheme\Core\Theme
         echo $this->endWidget($this->_layout);
     }
 
+    public function layout(array $params = [])
+    {
+        return $this->widget(static::LAYOUT, $params);
+    }
+
     public function alert(array $params = [])
     {
         return $this->widget(static::ALERT, $params);

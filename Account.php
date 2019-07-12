@@ -7,17 +7,17 @@ class Account extends \PhpTheme\Core\Widget
 
     const TEMPLATE = 'account';
 
-    public $userAvatarUrl;
+    public $avatarUrl;
 
     public $logoutUrl = '#';
 
     public $logoutLabel = 'Logout';
     
-    public $userUrl = '#'; 
+    public $profileUrl = '#'; 
 
-    public $userName;
+    public $name;
 
-    public $userEmail;
+    public $description;
 
     public $menu = [];
 
@@ -28,11 +28,11 @@ class Account extends \PhpTheme\Core\Widget
 
     public function run()
     {
-        $userAvatarUrl = $this->userAvatarUrl;
+        $avatarUrl = $this->avatarUrl;
 
-        if ($userAvatarUrl === null)
+        if ($avatarUrl === null)
         {
-            $userAvatarUrl = $this->theme->baseUrl . '/images/icon/avatar-01.jpg';
+            $avatarUrl = $this->theme->baseUrl . '/images/icon/avatar-01.jpg';
         }
 
         $menu = $this->menu;
@@ -43,12 +43,12 @@ class Account extends \PhpTheme\Core\Widget
         }
 
         return $this->render(static::TEMPLATE, [
-            'userAvatarUrl' => $userAvatarUrl,
+            'avatarUrl' => $avatarUrl,
             'logoutUrl' => $this->logoutUrl,
             'logoutLabel' => $this->logoutLabel,
-            'userName' => $this->userName,
-            'userEmail' => $this->userEmail,
-            'userUrl' => $this->userUrl,
+            'name' => $this->name,
+            'description' => $this->description,
+            'profileUrl' => $this->profileUrl,
             'menu' => $menu
         ]);
     }

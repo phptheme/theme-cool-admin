@@ -10,7 +10,15 @@
 
 .header__navbar ul li a
 {
-    line-height: 22px;
+    line-height: 26px;
+}
+
+@media (max-width: 1315px) and (min-width: 992px)
+{
+    .header__navbar ul li a
+    {
+        padding: 25px 15px;
+    }
 }
 
 .sub-header-mobile-2 .header__tool

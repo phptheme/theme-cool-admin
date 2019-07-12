@@ -19,7 +19,7 @@ class Layout extends \PhpTheme\Core\Widget
 
     public $content;
 
-    public $notifications = [];
+    public $notifications;
 
     public $account = [];
 
@@ -39,7 +39,7 @@ class Layout extends \PhpTheme\Core\Widget
     {
         $breadcrumbs = $this->breadcrumbs;
 
-        if ($breadcrumbs)
+        if (is_array($breadcrumbs))
         {
             $breadcrumbs['actionsMenu'] = $this->actionsMenu;
 

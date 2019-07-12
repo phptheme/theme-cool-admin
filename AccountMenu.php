@@ -18,4 +18,6 @@ class AccountMenu extends Menu
         ]
     ];
 
+    public $renderEmpty = false;
+
 }

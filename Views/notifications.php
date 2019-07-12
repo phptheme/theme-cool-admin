@@ -5,6 +5,7 @@ use PhpTheme\Core\Html;
 ?>
 <?= Html::beginTag('div', $options);?>
 <i class="zmdi zmdi-notifications"></i>
+<?php if($content):?>
 <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
 <?php if($title):?>
     <div class="notifi__title">
@@ -18,4 +19,6 @@ use PhpTheme\Core\Html;
     </div>
 <?php endif;?>
 </div>
+<?php endif;?>
+
 <?= Html::endTag('div');?>

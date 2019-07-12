@@ -2,23 +2,23 @@
 <div class="account-wrap">
     <div class="account-item account-item--style2 clearfix js-item-menu">
         <div class="image">
-            <img src="<?= $userAvatarUrl;?>" alt="<?= $userName;?>" />
+            <img src="<?= $avatarUrl;?>" alt="<?= $name;?>" />
         </div>
         <div class="content">
-            <a class="js-acc-btn" href="#"><?= $userName;?></a>
+            <a class="js-acc-btn" href="#"><?= $name;?></a>
         </div>
         <div class="account-dropdown js-dropdown">
             <div class="info clearfix">
                 <div class="image">
-                    <a href="<?= $userUrl;?>">
-                        <img src="<?= $userAvatarUrl;?>" alt="<?= $userName;?>" />
+                    <a href="<?= $profileUrl;?>">
+                        <img src="<?= $avatarUrl;?>" alt="<?= $name;?>" />
                     </a>
                 </div>
                 <div class="content">
                     <h5 class="name">
-                        <a href="<?= $userUrl;?>"><?= $userName;?></a>
+                        <a href="<?= $profileUrl;?>"><?= $name;?></a>
                     </h5>
-                    <span class="email"><?= $userEmail;?></span>
+                    <span class="email"><?= $description;?></span>
                 </div>
             </div>
             <?= $menu;?>

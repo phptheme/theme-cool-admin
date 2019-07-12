@@ -74,7 +74,7 @@ use PhpTheme\Core\Html;
 	            	<?= $this->mainMenu($mainMenu);?>
 	            </div>
 	            <div class="header__tool">
-	            	<?= $this->notifications($notifications);?>
+	            	<?= is_array($notifications) ? $this->notifications($notifications) : $notifications;?>
 	            	<?= $this->optionsMenu($optionsMenu);?>
                     <?= $this->account($account);?>
 	            </div>
@@ -111,7 +111,7 @@ use PhpTheme\Core\Html;
             <div class="d-block t-lg-none" style="position: absolute; left: -10px;">
 	    	  <?= $this->actionsMenu($actionsMenu);?>
             </div>
-            <?= $this->notifications($notifications);?>
+            <?= is_array($notifications) ? $this->notifications($notifications) : $notifications;?>
 			<?= $this->optionsMenu($optionsMenu);?>
             <?= $this->mobileAccount($account);?>
 	    </div>
