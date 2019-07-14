@@ -1,6 +1,6 @@
 <?php
 
-use PhpTheme\Core\Html;
+use PhpTheme\Helpers\Html;
 
 ?>
 <?= Html::beginTag('div', $options);?>
