@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-use PhpTheme\Core\Html;
+use PhpTheme\Helpers\Html;
 
 class Notifications extends \PhpTheme\Bootstrap4\Menu
 {
