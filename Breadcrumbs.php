@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Breadcrumbs extends \PhpTheme\Core\Menu
+class Breadcrumbs extends \PhpTheme\Bootstrap4\Menu
 {
 
     public $items = [];

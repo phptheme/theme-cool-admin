@@ -4,7 +4,7 @@ namespace PhpTheme\CoolAdminTheme;
 
 use PhpTheme\Core\Html;
 
-class Notifications extends Menu
+class Notifications extends \PhpTheme\Bootstrap4\Menu
 {
 
     const MENU_ITEM = NotificationsItem::class;

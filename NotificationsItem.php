@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class NotificationsItem extends \PhpTheme\Core\MenuItem
+class NotificationsItem extends \PhpTheme\Bootstrap4\MenuItem
 {
 
     public $icon;
