@@ -10,6 +10,11 @@
     cursor: auto;
 }
 
+.account-item > image
+{
+    cursor: pointer;
+}
+
 @media (max-width: 991px)
 {
     .au-breadcrumb
