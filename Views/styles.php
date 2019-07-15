@@ -10,7 +10,7 @@
     cursor: auto;
 }
 
-.account-item > image
+.account-item > div.image > image
 {
     cursor: pointer;
 }
