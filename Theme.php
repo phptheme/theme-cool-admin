@@ -43,6 +43,8 @@ class Theme extends \PhpTheme\Core\Theme
 
     const FORM_GROUP = FormGroup::class;
 
+    public $lang = 'en';
+
     protected $_layout;
 
     public function beginLayout(array $params = [])

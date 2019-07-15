@@ -4,7 +4,7 @@ use PhpTheme\Helpers\Html;
 
 ?>
 <!DOCTYPE html>
-<html lang="<?= $lang?>">
+<html lang="<?= $this->lang;?>">
 <head>
 <!-- Required meta tags-->
 <meta charset="UTF-8">
@@ -54,16 +54,16 @@ use PhpTheme\Helpers\Html;
 <script src="<?= $this->baseUrl;?>/vendor/chartjs/Chart.bundle.min.js"></script>
 <script src="<?= $this->baseUrl;?>/vendor/select2/select2.min.js"></script>
 <?= $this->styles();?>
-<?= $head;?>
+<?= $this->head;?>
 </head>
 <body>
-<?= $beginBody;?>
+<?= $this->beginBody;?>
 <div class="page-wrapper">
 <?= $content;?>
 </div>
 <!-- Main JS-->
 <script src="<?= $this->baseUrl;?>/js/main.js"></script>
-<?= $endBody;?>
+<?= $this->endBody;?>
 </body>
 </html>
 <!-- end document-->

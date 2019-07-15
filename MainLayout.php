@@ -27,14 +27,6 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $actionsMenu = [];
 
-    public $lang = 'en';
-
-    public $head;
-
-    public $beginBody;
-
-    public $endBody;
-
     protected function createBreadcrumbs()
     {
         $breadcrumbs = $this->breadcrumbs;
@@ -59,7 +51,6 @@ class MainLayout extends \PhpTheme\Core\Widget
         }
 
         return $this->render('main-layout', [
-            'lang' => $this->lang,
             'title' => $this->title,
             'copyright' => strtr($this->copyright, ['{year}' => date('Y')]),
             'breadcrumbs' => $this->createBreadcrumbs(),
@@ -68,9 +59,6 @@ class MainLayout extends \PhpTheme\Core\Widget
             'content' => $this->content,
             'notifications' => $this->notifications,
             'optionsMenu' => $this->optionsMenu,
-            'head' => $this->head,
-            'beginBody' => $this->beginBody,
-            'endBody' => $this->endBody,
             'account' => $this->account,
             'homeUrl' => $this->homeUrl,
             'logoUrl' => $logoUrl
