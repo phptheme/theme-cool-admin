@@ -21,7 +21,16 @@
                         {
                             if ($i != array_key_last($items))
                             {
-                                echo '<li class="list-inline-item"><a href="' . $item['url'] . '">' . $item['label'] . '</a></li>';
+                                if (!empty($item['url']))
+                                {
+                                    $content = '<a href="' . $item['url'] . '">' . $item['label'] . '</a>';
+                                }
+                                else
+                                {
+                                    $content = $item['label'];
+                                }
+
+                                echo '<li class="list-inline-item">' . $content .'</li>';
 
                                 echo '<li class="list-inline-item seprate"><span>/</span></li>';
                             }
