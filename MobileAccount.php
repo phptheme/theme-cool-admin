@@ -5,6 +5,6 @@ namespace PhpTheme\CoolAdminTheme;
 class MobileAccount extends Account
 {
 
-    const TEMPLATE = 'mobile-account';
+    protected $template = 'mobile-account';
     
 }

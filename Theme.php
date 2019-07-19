@@ -5,43 +5,43 @@ namespace PhpTheme\CoolAdminTheme;
 class Theme extends \PhpTheme\Core\Theme
 {
 
-    const ALERT = Alert::class;
+    protected $alertClass = Alert::class;
 
-    const STYLES = Styles::class;
+    protected $stylesClass = Styles::class;
 
-    const POPUP = Popup::class;
+    protected $popupClass = Popup::class;
 
-    const CARD = Card::class;
+    protected $cardClass = Card::class;
 
-    const LAYOUT = Layout::class;
+    protected $layoutClass = Layout::class;
 
-    const LOGIN_LAYOUT = LoginLayout::class;
+    protected $loginLayoutClass = LoginLayout::class;
 
-    const MAIN_LAYOUT = MainLayout::class;    
+    protected $mainLayoutClass = MainLayout::class;    
 
-    const MENU = Menu::class;
+    protected $menuClass = Menu::class;
 
-    const ACCOUNT_MENU = AccountMenu::class;
+    protected $accountMenuClass = AccountMenu::class;
 
-    const MAIN_MENU = MainMenu::class;
+    protected $mainMenuClass = MainMenu::class;
 
-    const MOBILE_MAIN_MENU = MobileMainMenu::class;
+    protected $mobileMainMenuClass = MobileMainMenu::class;
 
-    const OPTIONS_MENU = OptionsMenu::class;
+    protected $optionsMenuClass = OptionsMenu::class;
 
-    const ACTIONS_MENU = ActionsMenu::class;
+    protected $actionsMenuClass = ActionsMenu::class;
 
-    const BREADCRUMBS = Breadcrumbs::class;
+    protected $breadcrumbsClass = Breadcrumbs::class;
 
-    const ACCOUNT = Account::class;
+    protected $accountClass = Account::class;
 
-    const MOBILE_ACCOUNT = MobileAccount::class;
+    protected $mobileAccountClass = MobileAccount::class;
 
-    const NOTIFICATIONS = Notifications::class;
+    protected $notificationsClass = Notifications::class;
 
-    const TABLE = Table::class;
+    protected $tableClass = Table::class;
 
-    const FORM_GROUP = FormGroup::class;
+    protected $formGroupClass = FormGroup::class;
 
     public $lang = 'en';
 
@@ -49,7 +49,7 @@ class Theme extends \PhpTheme\Core\Theme
 
     public function beginLayout(array $params = [])
     {
-        $this->_layout = $this->beginWidget(static::LAYOUT, $params);
+        $this->_layout = $this->beginWidget($this->layoutClass, $params);
 
         return $this->_layout;
     }
@@ -61,92 +61,92 @@ class Theme extends \PhpTheme\Core\Theme
 
     public function layout(array $params = [])
     {
-        return $this->widget(static::LAYOUT, $params);
+        return $this->widget($this->layoutClass, $params);
     }
 
     public function loginLayout(array $params = [])
     {
-        return $this->widget(static::LOGIN_LAYOUT, $params);
+        return $this->widget($this->loginLayoutClass, $params);
     }
 
     public function mainLayout(array $params = [])
     {
-        return $this->widget(static::MAIN_LAYOUT, $params);
+        return $this->widget($this->mainLayoutClass, $params);
     }
 
     public function alert(array $params = [])
     {
-        return $this->widget(static::ALERT, $params);
+        return $this->widget($this->alertClass, $params);
     }
     
     public function popup(array $params = [])
     {
-        return $this->widget(static::POPUP, $params);
+        return $this->widget($this->popupClass, $params);
     }
 
     public function card(array $params = [])
     {
-        return $this->widget(static::CARD, $params);
+        return $this->widget($this->cardClass, $params);
     }
 
     public function formGroup(array $params = [])
     {
-        return $this->widget(static::FORM_GROUP, $params);
+        return $this->widget($this->formGroupClass, $params);
     }    
 
     public function styles(array $params = [])
     {
-        return $this->widget(static::STYLES, $params);
+        return $this->widget($this->stylesClass, $params);
     }
 
     public function breadcrumbs(array $params = [])
     {
-        return $this->widget(static::BREADCRUMBS, $params);
+        return $this->widget($this->breadcrumbsClass, $params);
     }
 
     public function mainMenu(array $params = [])
     {
-        return $this->widget(static::MAIN_MENU, $params);
+        return $this->widget($this->mainMenuClass, $params);
     }
 
     public function mobileMainMenu(array $params = [])
     {
-        return $this->widget(static::MOBILE_MAIN_MENU, $params);
+        return $this->widget($this->mobileMainMenuClass, $params);
     }
 
     public function accountMenu(array $params = [])
     {
-        return $this->widget(static::ACCOUNT_MENU, $params);
+        return $this->widget($this->accountMenuClass, $params);
     }
 
     public function optionsMenu(array $params = [])
     {
-        return $this->widget(static::OPTIONS_MENU, $params);
+        return $this->widget($this->optionsMenuClass, $params);
     }
 
     public function actionsMenu(array $params = [])
     {
-        return $this->widget(static::ACTIONS_MENU, $params);
+        return $this->widget($this->actionsMenuClass, $params);
     }
 
     public function account(array $params = [])
     {
-        return $this->widget(static::ACCOUNT, $params);
+        return $this->widget($this->accountClass, $params);
     }
 
     public function mobileAccount(array $params = [])
     {
-        return $this->widget(static::MOBILE_ACCOUNT, $params);
+        return $this->widget($this->mobileAccountClass, $params);
     }
 
     public function notifications(array $params = [])
     {
-        return $this->widget(static::NOTIFICATIONS, $params);
+        return $this->widget($this->notificationsClass, $params);
     }
 
     public function menu(array $params = [])
     {
-        return $this->widget(static::MENU, $params);
+        return $this->widget($this->menuClass, $params);
     }
 
 }

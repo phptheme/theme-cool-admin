@@ -5,7 +5,7 @@ namespace PhpTheme\CoolAdminTheme;
 class MainMenuItem extends MenuItem
 {
 
-    const SUBMENU = MainMenu::class;
+    protected $submenuClass = MainMenu::class;
 
     public $defaultSubmenu = [
         'options' => [

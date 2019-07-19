@@ -7,7 +7,7 @@ use PhpTheme\Helpers\Html;
 class Notifications extends \PhpTheme\Bootstrap4\Menu
 {
 
-    const MENU_ITEM = NotificationsItem::class;
+    protected $menuItemClass = NotificationsItem::class;
 
     public $title = ''; // 3 Notifications
 

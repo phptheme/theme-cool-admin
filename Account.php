@@ -5,7 +5,7 @@ namespace PhpTheme\CoolAdminTheme;
 class Account extends \PhpTheme\Core\Widget
 {
 
-    const TEMPLATE = 'account';
+    protected $template = 'account';
 
     public $avatarUrl;
 
@@ -42,7 +42,7 @@ class Account extends \PhpTheme\Core\Widget
             $menu = $this->createMenu($this->menu);
         }
 
-        return $this->render(static::TEMPLATE, [
+        return $this->render($this->template, [
             'avatarUrl' => $avatarUrl,
             'logoutUrl' => $this->logoutUrl,
             'logoutLabel' => $this->logoutLabel,
