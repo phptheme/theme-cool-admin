@@ -9,13 +9,6 @@ use PhpTheme\Helpers\Html;
 <!-- Required meta tags-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<?php
-/*
-<meta name="description" content="au theme template">
-<meta name="author" content="Hau Nguyen">
-<meta name="keywords" content="au theme template">
-*/
-?>
 <!-- Title Page-->
 <title><?= $this->escape($title);?></title>
 <!-- Fontfaces CSS-->
@@ -26,9 +19,6 @@ use PhpTheme\Helpers\Html;
 <!-- Bootstrap CSS-->
 <link href="<?= $this->baseUrl;?>/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 <!-- Vendor CSS-->
-<!--
-<link href="<?= $this->baseUrl;?>/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
--->
 <link href="<?= $this->baseUrl;?>/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
 <link href="<?= $this->baseUrl;?>/vendor/wow/animate.css" rel="stylesheet" media="all">
 <link href="<?= $this->baseUrl;?>/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
@@ -53,7 +43,6 @@ use PhpTheme\Helpers\Html;
 <script src="<?= $this->baseUrl;?>/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 <script src="<?= $this->baseUrl;?>/vendor/chartjs/Chart.bundle.min.js"></script>
 <script src="<?= $this->baseUrl;?>/vendor/select2/select2.min.js"></script>
-<?= $this->styles();?>
 <?= $this->head;?>
 </head>
 <body>

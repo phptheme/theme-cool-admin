@@ -7,8 +7,6 @@ class Theme extends \PhpTheme\Core\Theme
 
     protected $alertClass = Alert::class;
 
-    protected $stylesClass = Styles::class;
-
     protected $popupClass = Popup::class;
 
     protected $cardClass = Card::class;
@@ -92,11 +90,6 @@ class Theme extends \PhpTheme\Core\Theme
     public function formGroup(array $params = [])
     {
         return $this->widget($this->formGroupClass, $params);
-    }    
-
-    public function styles(array $params = [])
-    {
-        return $this->widget($this->stylesClass, $params);
     }
 
     public function breadcrumbs(array $params = [])
