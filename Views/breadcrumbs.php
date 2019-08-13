@@ -17,9 +17,15 @@
 
                         */
 
+                        $keys = array_keys($items);
+
+                        $keys = array_reverse($keys);
+
+                        $last_key = array_shift($keys);
+
                         foreach($items as $i => $item)
                         {
-                            if ($i != array_key_last($items))
+                            if ($i != $last_key)
                             {
                                 if (!empty($item['url']))
                                 {
