@@ -5,6 +5,6 @@ namespace PhpTheme\CoolAdminTheme;
 class Menu extends \PhpTheme\Bootstrap4\Menu
 {
 
-    protected $menuItemClass = MenuItem::class;
+    const MENU_ITEM = MenuItem::class;
 
 }

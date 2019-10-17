@@ -5,7 +5,7 @@ namespace PhpTheme\CoolAdminTheme;
 class Table extends \PhpTheme\Bootstrap4\Table
 {
 
-    protected $tableColumnClass = TableColumn::class;
+    const COLUMN = TableColumn::class;
 
     public $defaultOptions = [
         'class' => 'table table-borderless table-data3'

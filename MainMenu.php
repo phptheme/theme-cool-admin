@@ -7,7 +7,7 @@ use PhpTheme\Html\HtmlHelper;
 class MainMenu extends Menu
 {
 
-    protected $menuItemClass = MainMenuItem::class;
+    const MENU_ITEM = MainMenuItem::class;
 
     public $tag = 'ul';
 
