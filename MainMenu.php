@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-use PhpTheme\Helpers\Html;
+use PhpTheme\Html\HtmlHelper;
 
 class MainMenu extends Menu
 {
@@ -29,7 +29,7 @@ class MainMenu extends Menu
         {
             if(!empty($value['items']))
             {
-                $items[$key] = Html::mergeOptions($items[$key], [
+                $items[$key] = HtmlHelper::mergeAttributes($items[$key], [
                     'options' => [
                         'class' => [
                             'has-sub'

@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-use PhpTheme\Helpers\Html;
+use PhpTheme\Html\HtmlHelper;
 
 class Notifications extends \PhpTheme\Bootstrap4\Menu
 {
@@ -29,11 +29,11 @@ class Notifications extends \PhpTheme\Bootstrap4\Menu
     {
         $content = parent::run();
 
-        $options = Html::mergeOptions($this->defaultOptions, $this->options);
+        $options = HtmlHelper::mergeAttributes($this->defaultOptions, $this->options);
 
         if (count($this->items) > 0)
         {
-            $options = Html::mergeOptions($options, ['class' => ['has-noti']]);
+            $options = HtmlHelper::mergeAttributes($options, ['class' => ['has-noti']]);
         }
 
         return $this->render('notifications', [

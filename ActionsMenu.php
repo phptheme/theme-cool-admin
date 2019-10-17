@@ -14,8 +14,7 @@ class ActionsMenu extends Menu
     public $itemTag = null;
 
     public $defaultItem = [
-        'iconTemplate' => '<i class="{icon}"></i>
-            <span class="bot-line"></span><span class="d-none d-sm-inline"> {label}</span>',
+        'iconTemplate' => '<i class="{icon}"></i><span class="bot-line"></span><span class="d-none d-sm-inline"> {label}</span>',
         'defaultLinkOptions' => [
             'class' => 'btn btn-secondary'
         ]

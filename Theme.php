@@ -54,7 +54,7 @@ class Theme extends \PhpTheme\Core\Theme
 
     public function endLayout()
     {
-        echo $this->endWidget($this->_layout);
+        $this->endWidget($this->_layout);
     }
 
     public function layout(array $params = [])
@@ -97,6 +97,26 @@ class Theme extends \PhpTheme\Core\Theme
         return $this->widget($this->breadcrumbsClass, $params);
     }
 
+    public function account(array $params = [])
+    {
+        return $this->widget($this->accountClass, $params);
+    }
+
+    public function mobileAccount(array $params = [])
+    {
+        return $this->widget($this->mobileAccountClass, $params);
+    }
+
+    public function notifications(array $params = [])
+    {
+        return $this->widget($this->notificationsClass, $params);
+    }
+
+    public function menu(array $params = [])
+    {
+        return $this->widget($this->menuClass, $params);
+    }
+
     public function mainMenu(array $params = [])
     {
         return $this->widget($this->mainMenuClass, $params);
@@ -120,26 +140,6 @@ class Theme extends \PhpTheme\Core\Theme
     public function actionsMenu(array $params = [])
     {
         return $this->widget($this->actionsMenuClass, $params);
-    }
-
-    public function account(array $params = [])
-    {
-        return $this->widget($this->accountClass, $params);
-    }
-
-    public function mobileAccount(array $params = [])
-    {
-        return $this->widget($this->mobileAccountClass, $params);
-    }
-
-    public function notifications(array $params = [])
-    {
-        return $this->widget($this->notificationsClass, $params);
-    }
-
-    public function menu(array $params = [])
-    {
-        return $this->widget($this->menuClass, $params);
     }
 
 }
