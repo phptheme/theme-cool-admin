@@ -1,8 +1,3 @@
-<?php
-
-use PhpTheme\Helpers\Html;
-
-?>
 <!DOCTYPE html>
 <html lang="<?= $this->lang;?>">
 <head>
@@ -48,7 +43,9 @@ use PhpTheme\Helpers\Html;
 <body>
 <?= $this->beginBody;?>
 <div class="page-wrapper">
+<!-- begin content-->
 <?= $content;?>
+<!-- end content-->
 </div>
 <!-- Main JS-->
 <script src="<?= $this->baseUrl;?>/js/main.js"></script>

@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Breadcrumbs extends \PhpTheme\Bootstrap4\Menu
+class Breadcrumbs extends \PhpTheme\Core\Widget
 {
 
     public $items = [];
@@ -18,9 +18,18 @@ class Breadcrumbs extends \PhpTheme\Bootstrap4\Menu
             return;
         }
 
+        if ($this->actionsMenu)
+        {
+            $actionsMenu = $this->theme->actionsMenu($this->actionsMenu);
+        }
+        else
+        {
+            $actionsMenu = '';
+        }
+
         return $this->render('breadcrumbs', [
             'items' => $this->items,
-            'actionsMenu' => $this->theme->actionsMenu($this->actionsMenu),
+            'actionsMenu' => $actionsMenu,
             'title' => $this->title
         ]);
     }

@@ -11,12 +11,13 @@ class ActionsMenu extends Menu
         'class' => 'text-right action-menu'
     ];
 
-    public $itemTag = null;
-
     public $defaultItem = [
-        'iconTemplate' => '<i class="{icon}"></i><span class="bot-line"></span><span class="d-none d-sm-inline"> {label}</span>',
-        'defaultLinkOptions' => [
-            'class' => 'btn btn-secondary'
+        'tag' => false,
+        'defaultLink' => [
+            'iconTemplate' => '<i class="{icon}"></i><span class="bot-line"></span><span class="d-none d-sm-inline"> {label}</span>',
+            'defaultOptions' => [
+                'class' => 'btn btn-secondary'
+            ]
         ]
     ];
 

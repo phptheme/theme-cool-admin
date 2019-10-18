@@ -11,12 +11,14 @@ class Table extends \PhpTheme\Bootstrap4\Table
         'class' => 'table table-borderless table-data3'
     ];
 
-    public function run()
-    {
-        $content = parent::run();
+    public $template = '<div class="table-responsive m-b-40">{table}</div>';
 
-        return $this->render('table', [
-            'content' => $content
+    public function render()
+    {
+        $content = parent::render();
+
+        return strtr($this->template, [
+            '{table}' => $content
         ]);
     }
 

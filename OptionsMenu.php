@@ -18,13 +18,13 @@ class OptionsMenu extends Menu
         ]
     ];
 
-    public function run()
-    {
-        $content = parent::run();
+    public $template = '<div class="header-button-item js-item-menu"><i class="zmdi zmdi-settings"></i><div class="setting-dropdown js-dropdown">{menu}</div></div>';
 
-        return $this->render('options-menu', [
-            'content' => $content
-        ]);
+    public function render()
+    {
+        $content = parent::render();
+
+        return strtr($this->template, ['{menu}' => $content]);
     }
 
 }

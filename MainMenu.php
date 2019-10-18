@@ -20,41 +20,29 @@ class MainMenu extends Menu
         'activeOptions' => [
             'class' => ['active']
         ],
-        'iconTemplate' => '<i class="{icon}"></i><span class="bot-line"></span> {label}'
+        'defaultLink' => [
+            'iconTemplate' => '<i class="{icon}"></i><span class="bot-line"></span> {label}'
+        ]
     ];
 
-    protected function prepareItems($items)
+    public function createItem(array $item = [])
     {
-        foreach($items as $key => $value)
+        if (is_array($item) && !empty($item['items']))
         {
-            if(!empty($value['items']))
-            {
-                $items[$key] = HtmlHelper::mergeAttributes($items[$key], [
-                    'options' => [
-                        'class' => [
-                            'has-sub'
-                        ]
-                    ],
-                    'linkOptions' => [
-                        'class' => 'js-arrow', // mobile menu
-                        'onclick' => 'return false;'
+            $item = HtmlHelper::mergeAttributes($item, [
+                'options' => [
+                    'class' => [
+                        'has-sub'
                     ]
-                ]);
-            }
+                ],
+                'linkOptions' => [
+                    'class' => 'js-arrow', // mobile menu
+                    'onclick' => 'return false;'
+                ]
+            ]);
         }
 
-        return $items;
-    }
-
-    public function run()
-    {
-        $this->items = $this->prepareItems($this->items);
-
-        $content = parent::run();
-
-        return $this->render('main-menu', [
-            'content' => $content
-        ]);
+        return parent::createItem($item);
     }
 
 }
