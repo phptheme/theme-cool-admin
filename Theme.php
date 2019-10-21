@@ -35,7 +35,7 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     const MOBILE_ACCOUNT = MobileAccount::class;
 
-    const NOTIFICATIONS = Notifications::class;
+    //const NOTIFICATIONS = Notifications::class;
 
     const TABLE = Table::class;
 
@@ -107,10 +107,12 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
         return $this->widget(static::MOBILE_ACCOUNT, $params);
     }
 
+    /*
     public function notifications(array $params = [])
     {
         return $this->widget(static::NOTIFICATIONS, $params);
     }
+    */
 
     public function menu(array $params = [])
     {
@@ -119,27 +121,37 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function mainMenu(array $params = [])
     {
-        return $this->widget(static::MAIN_MENU, $params);
+        $class = static::MAIN_MENU;
+
+        return $class::factory($params)->render();
     }
 
     public function mobileMainMenu(array $params = [])
     {
-        return $this->widget(static::MOBILE_MAIN_MENU, $params);
+        $class = static::MOBILE_MAIN_MENU;
+
+        return $class::factory($params)->render();
     }
 
     public function accountMenu(array $params = [])
     {
-        return $this->widget(static::ACCOUNT_MENU, $params);
+        $class = static::ACCOUNT_MENU;
+
+        return $class::factory($params)->render();
     }
 
     public function optionsMenu(array $params = [])
     {
-        return $this->widget(static::OPTIONS_MENU, $params);
+        $class = static::OPTIONS_MENU;
+
+        return $class::factory($params)->render();
     }
 
     public function actionsMenu(array $params = [])
     {
-        return $this->widget(static::ACTIONS_MENU, $params);
+        $class = static::ACTIONS_MENU;
+
+        return $class::factory($params)->render();
     }
 
 }
