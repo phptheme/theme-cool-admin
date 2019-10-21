@@ -1,4 +1,4 @@
-<?php $this->beginLayout(['title' => $title]);?>
+<?php $this->theme->beginLayout(['title' => $title]);?>
 <!-- HEADER DESKTOP-->
 <header class="header-desktop3 d-none d-lg-block">
     <div class="section__content section__content--p35">
@@ -11,12 +11,12 @@
                 <?php endif;?>
             </div>
             <div class="header__navbar">
-            	<?= $this->mainMenu($mainMenu);?>
+            	<?= $this->theme->mainMenu($mainMenu);?>
             </div>
             <div class="header__tool">
-            	<?= is_array($notifications) ? $this->notifications($notifications) : $notifications;?>
-            	<?= $this->optionsMenu($optionsMenu);?>
-                <?= $this->account($account);?>
+            	<?= is_array($notifications) ? $this->theme->notifications($notifications) : $notifications;?>
+            	<?= $this->theme->optionsMenu($optionsMenu);?>
+                <?= $this->theme->account($account);?>
             </div>
         </div>
     </div>
@@ -42,18 +42,18 @@
     </div>
     <nav class="navbar-mobile">
         <div class="container-fluid">
-            <?= $this->mobileMainMenu($mainMenu);?>	      
+            <?= $this->theme->mobileMainMenu($mainMenu);?>	      
         </div>
     </nav>
 </header>
 <div class="sub-header-mobile-2 d-block d-lg-none">
     <div class="header__tool">
         <div class="d-block t-lg-none" style="position: absolute; left: -10px;">
-    	  <?= $this->actionsMenu($actionsMenu);?>
+    	  <?= $this->theme->actionsMenu($actionsMenu);?>
         </div>
-        <?= is_array($notifications) ? $this->notifications($notifications) : $notifications;?>
-		<?= $this->optionsMenu($optionsMenu);?>
-        <?= $this->mobileAccount($account);?>
+        <?= is_array($notifications) ? $this->theme->notifications($notifications) : $notifications;?>
+		<?= $this->theme->optionsMenu($optionsMenu);?>
+        <?= $this->theme->mobileAccount($account);?>
     </div>
 </div>
 <!-- END HEADER MOBILE -->
@@ -85,4 +85,4 @@
 	</section>
 	<!-- END COPYRIGHT-->
 </div>
-<?php $this->endLayout();?>
+<?php $this->theme->endLayout();?>

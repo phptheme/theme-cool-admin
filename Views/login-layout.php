@@ -1,11 +1,11 @@
-<?php $this->beginLayout(['title' => $title]);?>
+<?php $this->theme->beginLayout(['title' => $title]);?>
 <div class="page-wrapper">
     <div class="page-content--bge5">
         <div class="container">
             <div class="login-wrap">
                 <div class="login-content">
                     <div class="login-logo">
-                        <img src="<?= $this->baseUrl;?>/images/icon/logo.png" alt="CoolAdmin">
+                        <img src="<?= $this->theme->baseUrl;?>/images/icon/logo.png" alt="CoolAdmin">
                     </div>
                     <div class="login-form">
                         <?= $content;?>
@@ -15,4 +15,4 @@
         </div>
     </div>
 </div>
-<?php $this->endLayout();?>
+<?php $this->theme->endLayout();?>
