@@ -50,7 +50,7 @@
                 <?php endif;?>
             </div>
             <div class="d-none d-lg-block">
-                <?= $actionsMenu;?>
+                <?= $actionMenu;?>
             </div>
         </div>                   
     </div>

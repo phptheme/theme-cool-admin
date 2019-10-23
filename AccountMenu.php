@@ -7,13 +7,13 @@ class AccountMenu extends Menu
 
     public $tag = 'div';
 
-    public $defaultOptions = [
+    public $attributes = [
         'class' => 'account-dropdown__body'
     ];
 
-    public $defaultItem = [
+    public $itemOptions = [
         'tag' => 'div',
-        'defaultOptions' => [
+        'attributes' => [
             'class' => 'account-dropdown__item'
         ]
     ];

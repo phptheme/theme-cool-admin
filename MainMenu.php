@@ -11,16 +11,16 @@ class MainMenu extends Menu
 
     public $tag = 'ul';
 
-    public $defaultOptions = [
+    public $attributes = [
         'class' => 'list-unstyled',
     ];
 
-    public $defaultItem = [
+    public $itemOptions = [
         'tag' => 'li',
-        'activeOptions' => [
+        'activeAttributes' => [
             'class' => ['active']
         ],
-        'defaultLink' => [
+        'linkOptions' => [
             'iconTemplate' => '<i class="{icon}"></i><span class="bot-line"></span> {label}'
         ]
     ];
@@ -29,15 +29,17 @@ class MainMenu extends Menu
     {
         if (is_array($item) && !empty($item['items']))
         {
-            $item = HtmlHelper::mergeAttributes($item, [
-                'options' => [
+            $item = HtmlHelper::mergeOptions($item, [
+                'attributes' => [
                     'class' => [
                         'has-sub'
                     ]
                 ],
                 'linkOptions' => [
-                    'class' => 'js-arrow', // mobile menu
-                    'onclick' => 'return false;'
+                    'attributes' => [
+                        'class' => 'js-arrow', // mobile menu
+                        'onclick' => 'return false;'
+                    ]
                 ]
             ]);
         }

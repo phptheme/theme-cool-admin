@@ -27,7 +27,7 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     const OPTIONS_MENU = OptionsMenu::class;
 
-    const ACTIONS_MENU = ActionsMenu::class;
+    const ACTION_MENU = ActionMenu::class;
 
     const BREADCRUMBS = Breadcrumbs::class;
 
@@ -147,9 +147,9 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
         return $class::factory($params)->render();
     }
 
-    public function actionsMenu(array $params = [])
+    public function actionMenu(array $params = [])
     {
-        $class = static::ACTIONS_MENU;
+        $class = static::ACTION_MENU;
 
         return $class::factory($params)->render();
     }

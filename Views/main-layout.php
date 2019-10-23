@@ -11,11 +11,19 @@
                 <?php endif;?>
             </div>
             <div class="header__navbar">
-            	<?= $this->theme->mainMenu($mainMenu);?>
+            	<?= $mainMenu;?>
             </div>
             <div class="header__tool">
-            	<?= is_array($notifications) ? $this->theme->notifications($notifications) : $notifications;?>
-            	<?= $this->theme->optionsMenu($optionsMenu);?>
+            	
+                <?php
+
+                /*
+                
+                <?= is_array($notifications) ? $this->theme->notifications($notifications) : $notifications;?>
+            	
+                */?>
+
+                <?= $optionsMenu;?>
                 <?= $this->theme->account($account);?>
             </div>
         </div>
@@ -42,17 +50,23 @@
     </div>
     <nav class="navbar-mobile">
         <div class="container-fluid">
-            <?= $this->theme->mobileMainMenu($mainMenu);?>	      
+            <?= $mobileMainMenu;?>	      
         </div>
     </nav>
 </header>
 <div class="sub-header-mobile-2 d-block d-lg-none">
     <div class="header__tool">
         <div class="d-block t-lg-none" style="position: absolute; left: -10px;">
-    	  <?= $this->theme->actionsMenu($actionsMenu);?>
+    	  <?= $actionMenu;?>
         </div>
+        
+        <?php
+        /*
         <?= is_array($notifications) ? $this->theme->notifications($notifications) : $notifications;?>
-		<?= $this->theme->optionsMenu($optionsMenu);?>
+		*/
+        ?>
+
+        <?= $optionsMenu;?>
         <?= $this->theme->mobileAccount($account);?>
     </div>
 </div>

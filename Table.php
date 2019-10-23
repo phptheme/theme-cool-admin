@@ -7,7 +7,7 @@ class Table extends \PhpTheme\Bootstrap4\Table
 
     const COLUMN = TableColumn::class;
 
-    public $defaultOptions = [
+    public $attributes = [
         'class' => 'table table-borderless table-data3'
     ];
 
@@ -17,9 +17,7 @@ class Table extends \PhpTheme\Bootstrap4\Table
     {
         $content = parent::render();
 
-        return strtr($this->template, [
-            '{table}' => $content
-        ]);
+        return strtr($this->template, ['{table}' => $content]);
     }
 
 }

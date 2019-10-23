@@ -7,8 +7,8 @@ class MainMenuItem extends MenuItem
 
     const SUBMENU = MainMenu::class;
 
-    public $defaultSubmenu = [
-        'defaultOptions' => [
+    public $submenuOptions = [
+        'attributes' => [
             'class' => 'header3-sub-list list-unstyled'
         ]
     ];

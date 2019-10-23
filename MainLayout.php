@@ -15,31 +15,29 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $breadcrumbs = [];
 
+    public $breadcrumbsOptions = [];
+
     public $mainMenu = [];
+
+    public $mainMenuOptions = [];
+
+    public $mobileMainMenuOptions = [];
 
     public $content;
 
-    public $notifications;
+    //public $notificationMenu;
+
+    //public $notificactioMenuOptions = [];
 
     public $account = [];
 
     public $optionsMenu = [];
 
-    public $actionsMenu = [];
+    public $optionsMenuOptions = [];
 
-    protected function createBreadcrumbs()
-    {
-        $breadcrumbs = $this->breadcrumbs;
+    public $actionMenu = [];
 
-        if (is_array($breadcrumbs))
-        {
-            $breadcrumbs['actionsMenu'] = $this->actionsMenu;
-
-            $breadcrumbs = $this->theme->breadcrumbs($breadcrumbs);
-        }
-
-        return $breadcrumbs;
-    }
+    public $actionMenuOptions = [];
 
     public function run()
     {
@@ -54,15 +52,65 @@ class MainLayout extends \PhpTheme\Core\Widget
             'title' => $this->title,
             'copyright' => strtr($this->copyright, ['{year}' => date('Y')]),
             'breadcrumbs' => $this->createBreadcrumbs(),
-            'actionsMenu' => $this->actionsMenu,
-            'mainMenu' => $this->mainMenu,
+            'actionMenu' => $this->createActionMenu(),
+            'mainMenu' => $this->createMainMenu(),
+            'mobileMainMenu' => $this->createMobileMainMenu(),
             'content' => $this->content,
-            'notifications' => $this->notifications,
-            'optionsMenu' => $this->optionsMenu,
+            //'notifications' => $this->notifications,
+            'optionsMenu' => $this->createOptionsMenu(),
             'account' => $this->account,
             'homeUrl' => $this->homeUrl,
             'logoUrl' => $logoUrl
         ]);
+    }
+
+    protected function createMainMenu()
+    {
+        $options = $this->mainMenuOptions;
+
+        $options['items'] = $this->mainMenu;
+
+        return $this->theme->mainMenu($options);
+    }
+
+    protected function createMobileMainMenu()
+    {
+        $options = $this->mobileMainMenuOptions;
+
+        $options['items'] = $this->mainMenu;
+
+        return $this->theme->mainMenu($options);
+    }
+
+    protected function createActionMenu()
+    {
+        $options = $this->actionMenuOptions;
+
+        $options['items'] = $this->actionMenu;
+
+        return $this->theme->actionMenu($options);
+    }    
+
+    protected function createBreadcrumbs()
+    {
+        $options = $this->breadcrumbsOptions;
+
+        $options['actionMenu'] = $this->actionMenu;
+
+        $options['actionMenuOptions'] = $this->actionMenuOptions;
+
+        $options['items'] = $this->breadcrumbs;
+
+        return $this->theme->breadcrumbs($options);
+    }
+
+    protected function createOptionsMenu()
+    {
+        $options = $this->optionsMenuOptions;
+
+        $options['items'] = $this->optionsMenu;
+
+        return $this->theme->optionsMenu($options);
     }
 
 }

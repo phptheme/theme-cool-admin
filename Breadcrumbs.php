@@ -7,29 +7,35 @@ class Breadcrumbs extends \PhpTheme\Core\Widget
 
     public $items = [];
 
-    public $actionsMenu;
+    public $actionMenu;
+
+    public $actionMenuOptions = [];
 
     public $title = 'You are here:';
 
     public function run()
     {
-        if (!$this->items && !$this->actionsMenu)
+        if (!$this->items && !$this->actionMenu)
         {
             return;
         }
 
-        if ($this->actionsMenu)
+        if ($this->actionMenu)
         {
-            $actionsMenu = $this->theme->actionsMenu($this->actionsMenu);
+            $options = $this->actionMenuOptions;
+
+            $options['items'] = $this->actionMenu;
+
+            $actionMenu = $this->theme->actionMenu($options);
         }
         else
         {
-            $actionsMenu = '';
+            $actionMenu = '';
         }
 
         return $this->render('breadcrumbs', [
             'items' => $this->items,
-            'actionsMenu' => $actionsMenu,
+            'actionMenu' => $actionMenu,
             'title' => $this->title
         ]);
     }
