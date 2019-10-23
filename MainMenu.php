@@ -35,11 +35,9 @@ class MainMenu extends Menu
                         'has-sub'
                     ]
                 ],
-                'linkOptions' => [
-                    'attributes' => [
-                        'class' => 'js-arrow', // mobile menu
-                        'onclick' => 'return false;'
-                    ]
+                'linkAttributes' => [
+                    'class' => 'js-arrow', // mobile menu
+                    'onclick' => 'return false;'
                 ]
             ]);
         }
