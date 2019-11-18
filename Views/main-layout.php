@@ -77,8 +77,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    
                     <?= $breadcrumbs;?>
+
+                    <?php foreach($successMessages as $message):?>
+
+                        <?= $this->theme->message(['message' => $message, 'type' => 'success']);?>
+
+                    <?php endforeach;?>
+
+                    <?php foreach($errorMessages as $message):?>
+
+                        <?= $this->theme->message(['message' => $message, 'type' => 'error']);?>
+
+                    <?php endforeach;?>
+
+                    <?php foreach($infoMessages as $message):?>
+
+                        <?= $this->theme->message(['message' => $message, 'type' => 'info']);?>
+
+                    <?php endforeach;?>
+
                     <?= $content;?>
+                
                 </div>
             </div>
         </div>

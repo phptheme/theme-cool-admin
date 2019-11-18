@@ -39,6 +39,12 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $actionMenuOptions = [];
 
+    public $errorMessages = [];
+
+    public $successMessages = [];
+
+    public $infoMessages = [];
+
     public function run()
     {
         $logoUrl = $this->logoUrl;
@@ -60,7 +66,10 @@ class MainLayout extends \PhpTheme\Core\Widget
             'optionsMenu' => $this->createOptionsMenu(),
             'account' => $this->account,
             'homeUrl' => $this->homeUrl,
-            'logoUrl' => $logoUrl
+            'logoUrl' => $logoUrl,
+            'errorMessages' => $this->errorMessages,
+            'infoMessages' => $this->infoMessages,
+            'successMessages' => $this->successMessages
         ]);
     }
 
