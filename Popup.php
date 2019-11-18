@@ -17,7 +17,7 @@ class Popup extends \PhpTheme\Core\Widget
 
     public $cancelButtonLabel = 'Cancel';
 
-    public function run()
+    public function toString() : string
     {
         return $this->render('popup', [
             'id' => $this->id,

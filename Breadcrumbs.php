@@ -13,11 +13,11 @@ class Breadcrumbs extends \PhpTheme\Core\Widget
 
     public $title = 'You are here:';
 
-    public function run()
+    public function toString() : string
     {
         if (!$this->items && !$this->actionMenu)
         {
-            return;
+            return '';
         }
 
         if ($this->actionMenu)

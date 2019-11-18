@@ -13,7 +13,7 @@ class Alert extends \PhpTheme\Core\Widget
 
 	protected $message;
 
-	public function run()
+	public function toString() : string
 	{
 		$type = strtr($this->type, $this->types);
 

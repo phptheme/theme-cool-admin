@@ -45,7 +45,7 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $infoMessages = [];
 
-    public function run()
+    public function toString() : string
     {
         $logoUrl = $this->logoUrl;
 

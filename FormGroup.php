@@ -11,7 +11,7 @@ class FormGroup extends \PhpTheme\Core\Widget
 
     public $hint;
 
-    public function run()
+    public function toString() : string
     {
         return $this->render('form-group', [
             'content' => $this->content,

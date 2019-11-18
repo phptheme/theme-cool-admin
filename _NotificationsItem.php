@@ -11,7 +11,7 @@ class NotificationsItem extends \PhpTheme\Bootstrap4\MenuItem
 
     public $url;
 
-    public function run()
+    public function toString() : string
     {
         return $this->render('notifications-item', [
             'icon' => $this->icon,

@@ -25,9 +25,9 @@ class Notifications extends \PhpTheme\Bootstrap4\Menu
         'class' => 'header-button-item js-item-menu'
     ];
 
-    public function run()
+    public function toString() : string
     {
-        $content = parent::run();
+        $content = parent::toString();
 
         $options = HtmlHelper::mergeAttributes($this->defaultOptions, $this->options);
 

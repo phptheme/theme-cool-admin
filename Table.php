@@ -13,9 +13,9 @@ class Table extends \PhpTheme\Bootstrap4\Table
 
     public $template = '<div class="table-responsive m-b-40">{table}</div>';
 
-    public function render()
+    public function toString() : string
     {
-        $content = parent::render();
+        $content = parent::toString();
 
         return strtr($this->template, ['{table}' => $content]);
     }

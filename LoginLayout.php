@@ -7,7 +7,7 @@ class LoginLayout extends \PhpTheme\Core\Widget
 
     public $title;
 
-    public function run()
+    public function toString() : string
     {
         return $this->render('login-layout', [
             'content' => $this->content,

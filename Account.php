@@ -26,7 +26,7 @@ class Account extends \PhpTheme\Core\Widget
         return $this->theme->accountMenu($params);
     }
 
-    public function run()
+    public function toString() : string
     {
         $avatarUrl = $this->avatarUrl;
 

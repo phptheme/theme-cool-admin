@@ -20,9 +20,9 @@ class OptionsMenu extends Menu
 
     public $template = '<div class="header-button-item js-item-menu"><i class="zmdi zmdi-settings"></i><div class="setting-dropdown js-dropdown">{menu}</div></div>';
 
-    public function render()
+    public function toString() : string
     {
-        $content = parent::render();
+        $content = parent::toString();
 
         return strtr($this->template, ['{menu}' => $content]);
     }

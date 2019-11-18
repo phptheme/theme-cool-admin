@@ -9,7 +9,7 @@ class Card extends \PhpTheme\Core\Widget
 
     public $footer;
 
-    public function run()
+    public function toString() : string
     {
         return $this->render('card', [
             'content' => $this->content,

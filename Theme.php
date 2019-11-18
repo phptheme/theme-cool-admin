@@ -121,37 +121,27 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function mainMenu(array $params = [])
     {
-        $class = static::MAIN_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::MAIN_MENU, $params);
     }
 
     public function mobileMainMenu(array $params = [])
     {
-        $class = static::MOBILE_MAIN_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::MOBILE_MAIN_MENU, $params);
     }
 
     public function accountMenu(array $params = [])
     {
-        $class = static::ACCOUNT_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::ACCOUNT_MENU, $params);
     }
 
     public function optionsMenu(array $params = [])
     {
-        $class = static::OPTIONS_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::OPTIONS_MENU, $params);
     }
 
     public function actionMenu(array $params = [])
     {
-        $class = static::ACTION_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::ACTION_MENU, $params);
     }
 
 }
