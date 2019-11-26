@@ -25,7 +25,7 @@ class MainMenu extends Menu
         ]
     ];
 
-    public function createItem(array $item = [])
+    public function createItem($item = [])
     {
         if (is_array($item) && !empty($item['items']))
         {
