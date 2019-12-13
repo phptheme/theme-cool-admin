@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Alert extends \PhpTheme\Core\Widget
+class Alert extends \PhpTheme\Core\ThemeWidget
 {
 
 	protected $types = [

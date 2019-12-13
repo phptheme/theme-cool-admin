@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Title Page-->
-<title><?= $this->escape($title);?></title>
+<title><?= $title;?></title>
 <!-- Fontfaces CSS-->
 <link href="<?= $this->theme->baseUrl;?>/css/font-face.css" rel="stylesheet" media="all">
 <link href="<?= $this->theme->baseUrl;?>/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">

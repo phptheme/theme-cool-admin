@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Breadcrumbs extends \PhpTheme\Core\Widget
+class Breadcrumbs extends \PhpTheme\Core\ThemeWidget
 {
 
     public $items = [];

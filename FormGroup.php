@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class FormGroup extends \PhpTheme\Core\Widget
+class FormGroup extends \PhpTheme\Core\ThemeWidget
 {
 
     public $label;

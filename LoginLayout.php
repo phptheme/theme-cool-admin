@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class LoginLayout extends \PhpTheme\Core\Widget
+class LoginLayout extends \PhpTheme\Core\ThemeWidget
 {
 
     public $title;

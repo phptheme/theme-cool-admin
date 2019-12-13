@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Popup extends \PhpTheme\Core\Widget
+class Popup extends \PhpTheme\Core\ThemeWidget
 {
 
     public $id;

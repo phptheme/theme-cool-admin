@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Card extends \PhpTheme\Core\Widget
+class Card extends \PhpTheme\Core\ThemeWidget
 {
 
     public $header;
