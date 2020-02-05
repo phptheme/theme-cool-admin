@@ -5,6 +5,8 @@ namespace PhpTheme\CoolAdminTheme;
 class Breadcrumbs extends \PhpTheme\Core\Widget
 {
 
+    public $theme;
+
     public $items = [];
 
     public $actionMenu;

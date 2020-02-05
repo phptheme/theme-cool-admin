@@ -94,7 +94,7 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function breadcrumbs(array $params = [])
     {
-        return $this->widget(static::BREADCRUMBS, $params);
+        return $this->widget(static::BREADCRUMBS, array_merge($params, ['theme' => $this]));
     }
 
     public function account(array $params = [])
