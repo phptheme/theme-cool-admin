@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class OptionsMenu extends Menu
+class OptionsMenu extends \PhpTheme\Bootstrap4\Menu
 {
 
     public $tag = 'div';

@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class MainMenuItem extends MenuItem
+class MainMenuItem extends \PhpTheme\Bootstrap4\MenuItem
 {
 
     const SUBMENU = MainMenu::class;

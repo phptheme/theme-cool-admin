@@ -2,9 +2,9 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-use PhpTheme\Html\HtmlHelper;
+use PhpTheme\Core\HtmlHelper;
 
-class MainMenu extends Menu
+class MainMenu extends \PhpTheme\Bootstrap4\Menu
 {
 
     const MENU_ITEM = MainMenuItem::class;

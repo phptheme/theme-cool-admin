@@ -47,7 +47,7 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function beginLayout(array $params = [])
     {
-        $this->_layout = $this->beginWidget(static::LAYOUT, $params);
+        $this->_layout = $this->beginWidget(static::LAYOUT, array_merge($params, ['theme' => $this]));
 
         return $this->_layout;
     }
@@ -59,17 +59,17 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function layout(array $params = [])
     {
-        return $this->widget(static::LAYOUT, $params);
+        return $this->widget(static::LAYOUT, array_merge($params, ['theme' => $this]));
     }
 
     public function loginLayout(array $params = [])
     {
-        return $this->widget(static::LOGIN_LAYOUT, $params);
+        return $this->widget(static::LOGIN_LAYOUT, array_merge($params, ['theme' => $this]));
     }
 
     public function mainLayout(array $params = [])
     {
-        return $this->widget(static::MAIN_LAYOUT, $params);
+        return $this->widget(static::MAIN_LAYOUT, array_merge($params, ['theme' => $this]));
     }
 
     public function alert(array $params = [])
@@ -99,12 +99,12 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function account(array $params = [])
     {
-        return $this->widget(static::ACCOUNT, $params);
+        return $this->widget(static::ACCOUNT, array_merge($params, ['theme' => $this]));
     }
 
     public function mobileAccount(array $params = [])
     {
-        return $this->widget(static::MOBILE_ACCOUNT, $params);
+        return $this->widget(static::MOBILE_ACCOUNT, array_merge($params, ['theme' => $this]));
     }
 
     /*

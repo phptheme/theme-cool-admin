@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Account extends \PhpTheme\Core\ThemeWidget
+class Account extends \PhpTheme\Core\Widget
 {
 
     protected $template = 'account';

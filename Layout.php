@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class Layout extends \PhpTheme\Core\ThemeWidget
+class Layout extends \PhpTheme\Core\Widget
 {
 
     public $title;

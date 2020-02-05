@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CoolAdminTheme;
 
-class MobileMainMenu extends MainMenu
+class MobileMainMenu extends \PhpTheme\Bootstrap4\MainMenu
 {
 
     const MENU_ITEM = MobileMainMenuItem::class; 
