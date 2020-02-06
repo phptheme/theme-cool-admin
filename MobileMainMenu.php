@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\CoolAdminTheme;
+namespace PhpTheme\Themes\CoolAdmin;
 
 class MobileMainMenu extends \PhpTheme\Bootstrap4\MainMenu
 {

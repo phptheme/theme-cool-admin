@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpTheme\CoolAdminTheme;
+namespace PhpTheme\Themes\CoolAdmin;
 
-class Theme extends \PhpTheme\Bootstrap4\Theme
+class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
 {
 
     const ALERT = Alert::class;

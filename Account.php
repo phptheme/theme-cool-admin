@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\CoolAdminTheme;
+namespace PhpTheme\Themes\CoolAdmin;
 
 class Account extends \PhpTheme\Core\Widget
 {

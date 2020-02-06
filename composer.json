@@ -2,11 +2,11 @@
     "name": "phptheme/theme-cool-admin",
     "license": "MIT",
     "require": {
-        "phptheme/bootstrap4": "dev-master"
+        "phptheme/bootstrap4-theme": "*"
     },
     "autoload": {
         "psr-4": {
-            "PhpTheme\\CoolAdminTheme\\" : ""
+            "PhpTheme\\Themes\\CoolAdmin\\" : ""
         }
     }
 }
