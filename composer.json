@@ -2,7 +2,7 @@
     "name": "phptheme/theme-cool-admin",
     "license": "MIT",
     "require": {
-        "phptheme/bootstrap4-theme": "*"
+        "phptheme/theme-bootstrap4": "*"
     },
     "autoload": {
         "psr-4": {
