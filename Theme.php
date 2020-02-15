@@ -37,13 +37,15 @@ class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
 
     //const NOTIFICATIONS = Notifications::class;
 
-    const TABLE = Table::class;
+    const GRID = Grid::class;
 
-    const FORM_GROUP = FormGroup::class;
+    const FORM_GROUP = FormGroup::class;  
 
     public $lang = 'en';
 
-    protected $_layout;
+    //protected $_layout;
+
+    /*
 
     public function beginLayout(array $params = [])
     {
@@ -61,6 +63,8 @@ class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
     {
         return $this->widget(static::LAYOUT, array_merge($params, ['theme' => $this]));
     }
+
+    */
 
     public function loginLayout(array $params = [])
     {
@@ -92,10 +96,14 @@ class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
         return $this->widget(static::FORM_GROUP, $params);
     }
 
+    /*
+
     public function breadcrumbs(array $params = [])
     {
         return $this->widget(static::BREADCRUMBS, array_merge($params, ['theme' => $this]));
     }
+
+    */
 
     public function account(array $params = [])
     {
@@ -114,15 +122,19 @@ class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
     }
     */
 
+    /*
     public function menu(array $params = [])
     {
         return $this->widget(static::MENU, $params);
     }
+    */
 
+    /*
     public function mainMenu(array $params = [])
     {
         return $this->widget(static::MAIN_MENU, $params);
     }
+    */
 
     public function mobileMainMenu(array $params = [])
     {
