@@ -2,15 +2,37 @@
 
 namespace PhpTheme\Themes\CoolAdmin;
 
-class MobileMainMenuItem extends \PhpTheme\Bootstrap4\MainMenuItem
+use PhpTheme\Core\HtmlHelper;
+
+class MobileMainMenuItem extends \PhpTheme\Bootstrap4\MenuItem
 {
 
-    const SUBMENU = MobileMainMenu::class;
+    const MENU = MobileMainMenu2::class;
 
-    public $submenuOptions = [
-        'attributes' => [
-            'class' => 'navbar-mobile-sub__list list-unstyled js-sub-list'
-        ]
-    ];
+    protected function createLink(array $options = [])
+    {
+        if ($this->items)
+        {
+            $options = HtmlHelper::mergeOptions($options, [
+                'attributes' => [
+                    'class' => ['js-arrow']
+                ]
+            ]);
+        }
+
+        return parent::createLink($options);
+    }
+
+    public function toString() : string
+    {
+        if ($this->items)
+        {
+            $this->attributes = HtmlHelper::mergeOptions($this->attributes, [
+                'class' => ['has-sub']
+            ]);
+        }
+
+        return parent::toString();
+    }
 
 }

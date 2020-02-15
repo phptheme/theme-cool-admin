@@ -88,7 +88,7 @@ class MainLayout extends \PhpTheme\Core\Widget
 
         $options['items'] = $this->mainMenu;
 
-        return $this->theme->mainMenu($options);
+        return $this->theme->mobileMainMenu($options);
     }
 
     protected function createActionMenu()
