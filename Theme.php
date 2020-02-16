@@ -5,6 +5,8 @@ namespace PhpTheme\Themes\CoolAdmin;
 class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
 {
 
+    const GRID_CELL_BOOLEAN = GridCellBoolean::class;
+
     const ALERT = Alert::class;
 
     const POPUP = Popup::class;
